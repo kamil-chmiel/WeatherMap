@@ -18,7 +18,7 @@ import RealmSwift
 class MapWorker
 {
     private let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    private let APP_ID = "293e30634637ee295e7d6725873e8a46"
+    private let APP_ID = "YOUR_API_KEY"
     
     func fetchWeatherData(lon: Double, lat: Double, save: Bool, completion: @escaping (_ result: WeatherDataModel?) -> Void){
         

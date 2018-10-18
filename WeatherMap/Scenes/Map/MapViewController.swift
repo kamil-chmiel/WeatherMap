@@ -13,6 +13,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import SVProgressHUD
 
 protocol MapDisplayLogic: class
 {
@@ -137,6 +138,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MapDisplay
   
     func fetchWeather(lon: Double, lat: Double, save: Bool = false)
     {
+        SVProgressHUD.show()
         let request = Map.FetchWeather.Request(latitude: lat, longitude: lon, save: save)
         interactor?.fetchWeather(request: request)
     }
@@ -146,11 +148,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MapDisplay
         cityLabel.text = viewModel.city
         temperatureLabel.text = "\(viewModel.temperature) st"
         descriptionLabel.text = "Description: " + viewModel.desc
+        SVProgressHUD.dismiss()
     }
     
     func displayConnectionError() {
+        SVProgressHUD.dismiss()
         let alert = UIAlertController(title: "Connection problem", message: "There was a problem with internet connection.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        displayWeather(viewModel: Map.FetchWeather.ViewModel(temperature: 0, city: "-", desc: "-"))
     }
 }
