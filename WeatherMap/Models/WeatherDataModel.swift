@@ -11,6 +11,8 @@ import Foundation
 class WeatherDataModel {
     
     var temperature: Int = 0
+    var longitude: Double = 0
+    var latitude: Double = 0
     var city: String = ""
     var desc: String = ""
 }

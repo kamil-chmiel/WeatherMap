@@ -55,7 +55,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Locations" image="baseline_list" id="xvo-ZA-hkL"/>
                     <connections>
-                        <outlet property="tableView" destination="Wjx-AS-6qF" id="xlC-bZ-r9w"/>
+                        <outlet property="tableView" destination="Wjx-AS-6qF" id="hwT-6X-F3o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLf-fA-lxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,10 +133,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="baseline_map" id="ov0-lw-Hh9"/>
                     <connections>
-                        <outlet property="cityLabel" destination="scD-zk-17Q" id="5bb-Bo-gVI"/>
-                        <outlet property="descriptionLabel" destination="QRv-0y-uhO" id="ybj-kA-kJs"/>
-                        <outlet property="mapView" destination="9uf-tD-3zT" id="9S9-6f-sLl"/>
-                        <outlet property="temperatureLabel" destination="Imw-NX-K61" id="fDa-ux-Ky9"/>
+                        <outlet property="cityLabel" destination="scD-zk-17Q" id="Yw9-r1-Ena"/>
+                        <outlet property="descriptionLabel" destination="QRv-0y-uhO" id="DUH-nJ-rsc"/>
+                        <outlet property="mapView" destination="9uf-tD-3zT" id="cDX-Hz-LZH"/>
+                        <outlet property="temperatureLabel" destination="Imw-NX-K61" id="Pbf-NA-eEN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCe-9w-5e8" userLabel="First Responder" sceneMemberID="firstResponder"/>
